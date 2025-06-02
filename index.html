@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bhumarapu's Portfolio</title>
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --accent-color: #00ffff;
+    }
+
+    body.dark {
+      --bg-color: #121212;
+      --text-color: #ffffff;
+      --accent-color: #00e6e6;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    /* Dark Mode Switch */
+    .theme-switch-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 999;
+      font-weight: bold;
+    }
+
+    .theme-switch {
+      display: inline-block;
+      height: 24px;
+      position: relative;
+      width: 50px;
+    }
+
+    .theme-switch input {
+      display: none;
+    }
+
+    .slider {
+      background-color: #ccc;
+      bottom: 0;
+      cursor: pointer;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: 0.4s;
+      border-radius: 34px;
+    }
+
+    .slider:before {
+      background-color: white;
+      bottom: 4px;
+      content: "";
+      height: 16px;
+      left: 4px;
+      position: absolute;
+      transition: 0.4s;
+      width: 16px;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: var(--accent-color);
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: var(--accent-color);
+      color: #000;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-top: 1rem;
+      border: 4px solid #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    section {
+      padding: 1.5rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .skills-list span {
+      display: inline-block;
+      background: var(--accent-color);
+      color: #000;
+      padding: 0.5rem 1rem;
+      margin: 0.3rem;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin: 0.5rem 0;
+    }
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .resume-button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: var(--accent-color);
+      color: #000;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 1rem;
+      transition: 0.3s ease;
+    }
+
+    .resume-button:hover {
+      background: #00cccc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #eee;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      header, section {
+        padding: 1rem;
+      }
+
+      .skills-list span {
+        display: block;
+        margin: 0.5rem auto;
+        text-align: center;
+      }
+
+      .resume-button {
+        width: 90%;
+        display: block;
+        margin: 1rem auto;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🌗 Dark Mode Toggle -->
+  <div class="theme-switch-wrapper">
+    <label class="theme-switch" for="checkbox">
+      <input type="checkbox" id="checkbox" />
+      <div class="slider round"></div>
+    </label>
+    <em>Dark Mode</em>
+  </div>
+
+  <header>
+    <img src="profile.jpg" alt="My Profile Picture" class="profile-pic" />
+    <h1>Bhumarapu</h1>
+    <p>Engineering Student | Developer | Tech Explorer</p>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>
+      I’m a passionate BTech student with a traditional mindset and a futuristic approach. 
+      I enjoy solving real-world problems using code, and I’m constantly learning new things 
+      to build impactful tech.
+    </p>
+  </section>
+
+  <section>
+    <h2>Programming Languages</h2>
+    <div class="skills-list">
+      <span>C</span>
+      <span>C++</span>
+      <span>Java</span>
+      <span>Python</span>
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>PHP</span>
+      <span>MySQL</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Certifications</h2>
+    <ul>
+      <li>💻 Java, C++ & PHP Crash Course – Crunch Coding [<a href="https://udemy.com/certificate/yourcert1" target="_blank">View</a>]</li>
+      <li>🧠 Intro to AI – Coursera [<a href="https://coursera.org/verify/yourcert2" target="_blank">View</a>]</li>
+      <li>🐍 Python for Everybody – edX [<a href="https://edx.org/verify/yourcert3" target="_blank">View</a>]</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <ul>
+      <li>🎓 <strong>Student Management System</strong> – [<a href="https://github.com/YOURUSERNAME/student-management" target="_blank">GitHub</a>]</li>
+      <li>🛰️ <strong>Drone Fleet Optimizer</strong> – [<a href="https://github.com/YOURUSERNAME/drone-fleet" target="_blank">GitHub</a>]</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Contact Me</h2>
+    <ul>
+      <li>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></li>
+      <li>GitHub: <a href="https://github.com/YOURUSERNAME" target="_blank">@YOURUSERNAME</a></li>
+      <li>Instagram: <a href="https://instagram.com/YOURBRAND" target="_blank">@YOURBRAND</a></li>
+    </ul>
+    <a href="resume.pdf" download class="resume-button">📄 Download Resume</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Bhumarapu. Built with 💻 + ☕</p>
+  </footer>
+
+  <!-- JS for Dark Mode -->
+  <script>
+    const checkbox = document.getElementById("checkbox");
+    checkbox.addEventListener("change", () => {
+      document.body.classList.toggle("dark");
+    });
+  </script>
+
+</body>
+</html>
