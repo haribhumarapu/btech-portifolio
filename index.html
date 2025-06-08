@@ -8,13 +8,15 @@
     :root {
       --bg-color: #ffffff;
       --text-color: #000000;
-      --accent-color: #00ffff;
+      --accent-color: #c084fc; /* creative pastel violet */
+      --footer-bg: linear-gradient(45deg, #d8b4fe, #a78bfa);
     }
 
     body.dark {
-      --bg-color: #121212;
+      --bg-color: #0e0e0e;
       --text-color: #ffffff;
-      --accent-color: #00e6e6;
+      --accent-color: #8b5cf6;
+      --footer-bg: linear-gradient(45deg, #6d28d9, #9333ea);
     }
 
     body {
@@ -26,7 +28,6 @@
       line-height: 1.6;
     }
 
-    /* Dark Mode Switch */
     .theme-switch-wrapper {
       display: flex;
       align-items: center;
@@ -84,7 +85,7 @@
     header {
       text-align: center;
       padding: 2rem 1rem;
-      background: var(--accent-color);
+      background: url('https://www.transparenttextures.com/patterns/stardust.png'), var(--accent-color);
       color: #000;
     }
 
@@ -145,14 +146,16 @@
     }
 
     .resume-button:hover {
-      background: #00cccc;
+      background: #7c3aed;
+      color: #fff;
     }
 
     footer {
       text-align: center;
       padding: 1rem;
-      background: #eee;
+      background: var(--footer-bg);
       font-size: 0.9rem;
+      color: #fff;
       margin-top: 2rem;
     }
 
@@ -177,8 +180,6 @@
   </style>
 </head>
 <body>
-
-  <!-- 🌗 Dark Mode Toggle -->
   <div class="theme-switch-wrapper">
     <label class="theme-switch" for="checkbox">
       <input type="checkbox" id="checkbox" />
@@ -196,9 +197,7 @@
   <section>
     <h2>About Me</h2>
     <p>
-      I’m a passionate BTech student with a traditional mindset and a futuristic approach. 
-      I enjoy solving real-world problems using code, and I’m constantly learning new things 
-      to build impactful tech.
+      I’m a passionate BTech student who believes in tradition with a twist of innovation. With code as my brush and curiosity as my compass, I explore the digital canvas.
     </p>
   </section>
 
@@ -218,17 +217,17 @@
   <section>
     <h2>Certifications</h2>
     <ul>
-      <li>💻 Java, C++ & PHP Crash Course – Crunch Coding [<a href="https://udemy.com/certificate/yourcert1" target="_blank">View</a>]</li>
-      <li>🧠 Intro to AI – Coursera [<a href="https://coursera.org/verify/yourcert2" target="_blank">View</a>]</li>
-      <li>🐍 Python for Everybody – edX [<a href="https://edx.org/verify/yourcert3" target="_blank">View</a>]</li>
+      <li>💻 Java, C++ & PHP Crash Course – Crunch Coding [<a href="#">View</a>]</li>
+      <li>🧠 Intro to AI – Coursera [<a href="#">View</a>]</li>
+      <li>🐍 Python for Everybody – edX [<a href="#">View</a>]</li>
     </ul>
   </section>
 
   <section>
     <h2>Projects</h2>
     <ul>
-      <li>🎓 <strong>Student Management System</strong> – [<a href="https://github.com/YOURUSERNAME/student-management" target="_blank">GitHub</a>]</li>
-      <li>🛰️ <strong>Drone Fleet Optimizer</strong> – [<a href="https://github.com/YOURUSERNAME/drone-fleet" target="_blank">GitHub</a>]</li>
+      <li>🎓 <strong>Student Management System</strong> – [<a href="#">GitHub</a>]</li>
+      <li>🛰️ <strong>Drone Fleet Optimizer</strong> – [<a href="#">GitHub</a>]</li>
     </ul>
   </section>
 
@@ -236,23 +235,21 @@
     <h2>Contact Me</h2>
     <ul>
       <li>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></li>
-      <li>GitHub: <a href="https://github.com/YOURUSERNAME" target="_blank">@YOURUSERNAME</a></li>
-      <li>Instagram: <a href="https://instagram.com/YOURBRAND" target="_blank">@YOURBRAND</a></li>
+      <li>GitHub: <a href="#">@bhumarapu</a></li>
+      <li>Instagram: <a href="#">@btechbabai</a></li>
     </ul>
     <a href="resume.pdf" download class="resume-button">📄 Download Resume</a>
   </section>
 
   <footer>
-    <p>&copy; 2025 Hari Bhumarapu. Built with ❤️, fueled by ☕, and powered by dreams.</p>
+    <p>&copy; 2025 Bhumarapu. Built with ❤️ + ☕ — crafted under the stars & coded with tradition and ambition.</p>
   </footer>
 
-  <!-- JS for Dark Mode -->
   <script>
     const checkbox = document.getElementById("checkbox");
     checkbox.addEventListener("change", () => {
       document.body.classList.toggle("dark");
     });
   </script>
-
 </body>
 </html>
