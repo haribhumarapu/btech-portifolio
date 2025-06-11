@@ -116,7 +116,6 @@
       width: calc(50% - 10px);
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       transition: transform 0.3s ease;
-      cursor: pointer;
     }
 
     .achievement-card:hover {
@@ -126,6 +125,15 @@
     .achievement-card h3 {
       color: #00bcd4;
       margin-top: 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .achievement-card h3 a {
+      font-size: 14px;
+      color: #00bcd4;
+      text-decoration: underline;
     }
 
     .resume-btn {
@@ -263,7 +271,7 @@
       <hr>
       <p>
         🎓 I am a BTech student specializing in Computer Science and Engineering, passionate about software development and problem-solving.<br>
-        💡 I have hands-on experience with Python, SQL, HTML, CSS, and JavaScript, enabling me to build dynamic and efficient applications.<br>
+        💡 I have hands-on experience with Python, SQL, HTML, CSS, and JavaScript.<br>
         🧠 With a strong foundation in data structures and algorithms, I enjoy optimizing solutions for better performance.<br>
         🚀 Constantly learning and innovating, I strive to create impactful digital solutions.
       </p>
@@ -287,9 +295,12 @@
       <h2>🏅 Achievements</h2>
       <hr>
       <div class="achievements-container">
-        <div class="achievement-card" onclick="openModal()">
-          <h3>🎓 Academic Excellence</h3>
-          <p>🏆 I’m overjoyed to share that I have been awarded the "Student Iconic Award" 🏅 for Excellence in Academics 📚✨!</p>
+        <div class="achievement-card">
+          <h3>
+            🎓 Academic Excellence
+            <a href="javascript:void(0)" onclick="openModal()" title="View Award Photo">📸 Click here</a>
+          </h3>
+          <p>🏆 I’m overjoyed to share that I have been awarded the "Student Iconic Award" for Excellence in Academics!</p>
         </div>
         <div class="achievement-card">
           <h3>👨‍💻 Hackathon Winner</h3>
@@ -338,11 +349,11 @@
     </footer>
   </div>
 
-  <!-- Modal for Academic Excellence -->
+  <!-- Modal -->
   <div id="modal" class="modal">
     <span class="close" onclick="closeModal()">&times;</span>
     <div class="modal-content">
-      <img src="award.jpg" alt="Academic Award">
+      <img src="academic_award.jpg" alt="Academic Award">
     </div>
   </div>
 
