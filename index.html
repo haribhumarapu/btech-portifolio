@@ -436,6 +436,101 @@
       color: #d1d1d1;
     }
 
+    /* Projects Section */
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    .project-card {
+      background: rgba(33, 37, 58, 0.7);
+      border-radius: 15px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(0,230,216,0.1);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(250, 47, 254, 0.2);
+      background: rgba(33, 37, 58, 0.9);
+    }
+    .project-image {
+      height: 180px;
+      overflow: hidden;
+      position: relative;
+    }
+    .project-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .project-card:hover .project-image img {
+      transform: scale(1.05);
+    }
+    .project-content {
+      padding: 20px;
+    }
+    .project-title {
+      font-size: 1.3em;
+      margin-bottom: 10px;
+      color: var(--primary);
+      font-family: var(--font-heading);
+    }
+    .project-description {
+      color: #d1d1d1;
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 15px;
+    }
+    .tech-tag {
+      background: rgba(0, 230, 216, 0.1);
+      color: var(--primary);
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.8em;
+      font-weight: 600;
+    }
+    .project-links {
+      display: flex;
+      gap: 10px;
+    }
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 12px;
+      border-radius: 5px;
+      font-size: 0.9em;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .demo-link {
+      background: var(--cta);
+      color: #1c2527;
+      font-weight: 600;
+    }
+    .demo-link:hover {
+      background: #3ae06d;
+      transform: translateY(-2px);
+    }
+    .code-link {
+      background: rgba(0, 230, 216, 0.2);
+      color: var(--primary);
+      border: 1px solid var(--primary);
+    }
+    .code-link:hover {
+      background: rgba(0, 230, 216, 0.3);
+      transform: translateY(-2px);
+    }
+
     /* Contact Section */
     .contact-section i {
       margin-right: 9px;
@@ -540,6 +635,9 @@
       nav .links {
         gap: 20px;
       }
+      .projects-container {
+        grid-template-columns: 1fr;
+      }
     }
     @media (max-width: 650px) {
       nav {
@@ -585,6 +683,9 @@
       .skill-icon i {
         font-size: 50px;
       }
+      .project-title {
+        font-size: 1.2em;
+      }
     }
   </style>
 </head>
@@ -605,6 +706,7 @@
       <a href="#home" class="active">Home</a>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
       <a href="#achievements">Achievements</a>
       <a href="#certifications">Certificates</a>
       <a href="#contact">Contact</a>
@@ -733,6 +835,125 @@
         <div class="skill-icon" title="AWS" aria-label="AWS">
           <i class="fab fa-aws" aria-hidden="true"></i>
           <div class="skill-label">AWS</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section" id="projects" role="region" aria-label="Projects">
+    <h2>Projects</h2>
+    <hr />
+    <div class="projects-container">
+      <!-- Project 1 -->
+      <div class="project-card">
+        <div class="project-image">
+          <!-- Replace with your project image -->
+          <img src="project1.jpg" alt="E-commerce Website Screenshot">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">E-commerce Platform</h3>
+          <p class="project-description">
+            A full-stack e-commerce website with user authentication, product catalog, shopping cart, and payment integration.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">Stripe API</span>
+          </div>
+          <div class="project-links">
+            <a href="https://example-ecommerce.com" target="_blank" class="project-link demo-link">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+            <a href="https://github.com/yourusername/ecommerce-platform" target="_blank" class="project-link code-link">
+              <i class="fab fa-github"></i> View Code
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <div class="project-image">
+          <!-- Replace with your project image -->
+          <img src="project2.jpg" alt="Task Manager App Screenshot">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Task Management App</h3>
+          <p class="project-description">
+            A productivity application for task management with drag-and-drop interface, reminders, and team collaboration features.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Django</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://example-taskapp.com" target="_blank" class="project-link demo-link">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+            <a href="https://github.com/yourusername/task-manager" target="_blank" class="project-link code-link">
+              <i class="fab fa-github"></i> View Code
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <div class="project-image">
+          <!-- Replace with your project image -->
+          <img src="project3.jpg" alt="Sentiment Analysis Dashboard">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Sentiment Analysis Tool</h3>
+          <p class="project-description">
+            NLP application that analyzes customer reviews and social media posts to determine sentiment and key themes.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">NLTK</span>
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">D3.js</span>
+          </div>
+          <div class="project-links">
+            <a href="https://example-sentiment.com" target="_blank" class="project-link demo-link">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+            <a href="https://github.com/yourusername/sentiment-analysis" target="_blank" class="project-link code-link">
+              <i class="fab fa-github"></i> View Code
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-card">
+        <div class="project-image">
+          <!-- Replace with your project image -->
+          <img src="project4.jpg" alt="Weather App Interface">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Weather Forecast App</h3>
+          <p class="project-description">
+            Real-time weather application with 5-day forecasts, location detection, and severe weather alerts.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">OpenWeather API</span>
+            <span class="tech-tag">Geolocation API</span>
+          </div>
+          <div class="project-links">
+            <a href="https://example-weather.com" target="_blank" class="project-link demo-link">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+            <a href="https://github.com/yourusername/weather-app" target="_blank" class="project-link code-link">
+              <i class="fab fa-github"></i> View Code
+            </a>
+          </div>
         </div>
       </div>
     </div>
