@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bhumarapu Hari Prasad | Student Portfolio</title>
-  <!-- Font Awesome 6.5 for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhumarapu Hari Prasad | Portfolio</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -15,10 +15,12 @@
       --primary: #00e6d8;
       --secondary: #fa2ffe;
       --cta: #50fa7b;
+      --error: #ff4757;
       --font-main: 'Poppins', sans-serif;
       --font-heading: 'Space Grotesk', sans-serif;
     }
 
+    /* Base Styles */
     html {
       scroll-behavior: smooth;
     }
@@ -43,7 +45,6 @@
       object-fit: cover;
     }
     
-    /* Overlay to darken video */
     #video-overlay {
       position: fixed;
       top: 0;
@@ -66,7 +67,6 @@
       position: sticky;
       top: 0;
       z-index: 10;
-      user-select: none;
       border-bottom: 1px solid rgba(0,230,216,0.2);
     }
     nav .logo-img {
@@ -111,7 +111,7 @@
       width: 100%;
     }
 
-    /* Section visibility */
+    /* Sections */
     .main-hero,
     .section {
       display: none;
@@ -122,8 +122,7 @@
     }
 
     /* Home Section */
-    .main-hero,
-    .main-hero.active {
+    .main-hero {
       min-height: 100vh;
       height: 100dvh;
       display: flex;
@@ -200,7 +199,6 @@
       line-height: 1.6em;
       color: #e0e0ff;
     }
-    /* Download Resume Button with Ripple */
     .resume-btn {
       position: relative;
       overflow: hidden;
@@ -216,7 +214,6 @@
       font-size: 1.1em;
       cursor: pointer;
       transition: all 0.3s ease;
-      user-select: none;
       font-family: var(--font-heading);
       letter-spacing: 0.5px;
     }
@@ -278,7 +275,14 @@
       margin: 14px 0 30px;
     }
 
-    /* Skills Subsections */
+    /* About Section */
+    .section p {
+      font-size: 1.1em;
+      line-height: 1.8;
+      color: #e0e0ff;
+    }
+
+    /* Skills Section */
     .skills-subsection {
       margin-bottom: 40px;
       padding-bottom: 20px;
@@ -300,8 +304,6 @@
       color: var(--primary);
       font-size: 1.1em;
     }
-
-    /* Skill Icons */
     .skill-icons {
       display: flex;
       flex-wrap: wrap;
@@ -318,14 +320,11 @@
       cursor: default;
       color: #00e6d8;
       transition: all 0.3s ease;
-      user-select: none;
     }
     .skill-icon i {
       font-size: 60px;
       margin-bottom: 12px;
-      transition:
-        transform 0.22s cubic-bezier(.62, .08, .42, 1.16),
-        box-shadow 0.22s;
+      transition: transform 0.22s cubic-bezier(.62, .08, .42, 1.16), box-shadow 0.22s;
     }
     .skill-icon:hover {
       color: #fa2ffe;
@@ -337,103 +336,16 @@
       animation: skillPop 0.6s cubic-bezier(.2, .83, .6, 1.24);
     }
     @keyframes skillPop {
-      40% {
-        transform: scale(1.23) rotate(-3deg);
-      }
-      70% {
-        box-shadow: 0 0 32px #fa2ffe36, 0 0 14px #00e6d84d;
-      }
-      100% {
-        transform: scale(1.18) rotate(-7deg);
-      }
+      40% { transform: scale(1.23) rotate(-3deg); }
+      70% { box-shadow: 0 0 32px #fa2ffe36, 0 0 14px #00e6d84d; }
+      100% { transform: scale(1.18) rotate(-7deg); }
     }
     .skill-label {
       font-weight: 700;
       font-size: 1.15em;
       color: inherit;
       text-align: center;
-      user-select: none;
       font-family: var(--font-heading);
-    }
-
-    /* Certificates & Achievements Gallery */
-    .cert-gallery {
-      display: flex;
-      gap: 30px 18px;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 18px;
-    }
-    .cert-card {
-      background: rgba(33, 37, 58, 0.7);
-      backdrop-filter: blur(5px);
-      border-radius: 15px;
-      box-shadow: 0 2px 14px #00e6d81e;
-      width: 280px;
-      max-width: 96vw;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 12px;
-      transition: all 0.3s ease;
-      cursor: pointer;
-      border: 1px solid rgba(0,230,216,0.1);
-    }
-    .cert-card:hover {
-      transform: translateY(-6px) scale(1.045);
-      box-shadow: 0 6px 28px #fa2ffe27, 0 3px 8px #00e6d81a;
-      background: rgba(33, 37, 58, 0.9);
-    }
-    .cert-image {
-      width: 240px;
-      height: 180px;
-      border-radius: 11px;
-      overflow: hidden;
-      background: #fff;
-      box-shadow: 0 2px 13px #0002;
-      margin-bottom: 15px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .cert-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      background: white;
-    }
-    .cert-title {
-      color: #b5edea;
-      font-weight: 700;
-      font-size: 1.15em;
-      text-align: center;
-      margin-bottom: 8px;
-      letter-spacing: 0.01em;
-      white-space: normal;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      justify-content: center;
-      font-family: var(--font-heading);
-    }
-    .cert-title a {
-      color: #00e6d8;
-      margin-left: 2px;
-      font-size: 0.95em;
-      opacity: 0.8;
-      transition: color 0.18s, opacity 0.14s;
-    }
-    .cert-title a:hover {
-      color: #fa2ffe;
-      opacity: 1;
-    }
-    .cert-card p {
-      text-align: center;
-      margin-top: 8px;
-      font-size: 0.95em;
-      line-height: 1.4;
-      color: #d1d1d1;
     }
 
     /* Projects Section */
@@ -531,12 +443,73 @@
       transform: translateY(-2px);
     }
 
-    /* Contact Section */
-    .contact-section i {
-      margin-right: 9px;
-      color: var(--primary);
-      font-size: 1.12em;
+    /* Achievements & Certificates */
+    .cert-gallery {
+      display: flex;
+      gap: 30px 18px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 18px;
     }
+    .cert-card {
+      background: rgba(33, 37, 58, 0.7);
+      border-radius: 15px;
+      box-shadow: 0 2px 14px #00e6d81e;
+      width: 280px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(0,230,216,0.1);
+    }
+    .cert-card:hover {
+      transform: translateY(-6px) scale(1.045);
+      box-shadow: 0 6px 28px #fa2ffe27, 0 3px 8px #00e6d81a;
+    }
+    .cert-image {
+      width: 240px;
+      height: 180px;
+      border-radius: 11px;
+      overflow: hidden;
+      background: #fff;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .cert-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .cert-title {
+      color: #b5edea;
+      font-weight: 700;
+      font-size: 1.15em;
+      text-align: center;
+      margin-bottom: 8px;
+      font-family: var(--font-heading);
+    }
+    .cert-title a {
+      color: #00e6d8;
+      font-size: 0.95em;
+      opacity: 0.8;
+      transition: color 0.18s, opacity 0.14s;
+    }
+    .cert-title a:hover {
+      color: #fa2ffe;
+      opacity: 1;
+    }
+    .cert-card p {
+      text-align: center;
+      margin-top: 8px;
+      font-size: 0.95em;
+      line-height: 1.4;
+      color: #d1d1d1;
+    }
+
+    /* Contact Form */
     .contact-form input,
     .contact-form textarea {
       width: 100%;
@@ -544,12 +517,9 @@
       margin-top: 12px;
       border: none;
       border-radius: 6px;
-      box-sizing: border-box;
       font-size: 1em;
       background: rgba(33, 37, 58, 0.7);
       color: #fff;
-      resize: vertical;
-      font-family: var(--font-main);
       border: 1px solid rgba(0,230,216,0.2);
       transition: all 0.3s ease;
     }
@@ -569,16 +539,43 @@
       border-radius: 6px;
       font-size: 1.1em;
       cursor: pointer;
-      box-shadow: 0 2px 12px #00e6d826;
       transition: all 0.3s ease;
       font-family: var(--font-heading);
-      letter-spacing: 0.5px;
     }
     .contact-form button:hover {
       background: var(--primary);
-      color: #262833;
       transform: translateY(-3px);
-      box-shadow: 0 4px 16px #00e6d840;
+    }
+    .form-message {
+      margin-top: 15px;
+      padding: 12px;
+      border-radius: 8px;
+      display: none;
+      animation: fadeIn 0.3s ease;
+    }
+    .form-message.success {
+      background: rgba(80, 250, 123, 0.15);
+      border: 1px solid var(--cta);
+      color: var(--cta);
+    }
+    .form-message.error {
+      background: rgba(255, 71, 87, 0.15);
+      border: 1px solid var(--error);
+      color: var(--error);
+    }
+    .form-message.loading {
+      background: rgba(0, 230, 216, 0.15);
+      border: 1px solid var(--primary);
+      color: var(--primary);
+    }
+    .privacy-check {
+      margin: 15px 0;
+      display: flex;
+      align-items: center;
+      font-size: 0.9em;
+    }
+    .privacy-check input {
+      margin-right: 10px;
     }
 
     /* Footer */
@@ -587,10 +584,6 @@
       text-align: center;
       padding: 30px 0 20px 0;
       font-size: 1.02em;
-      letter-spacing: 0.012em;
-      user-select: none;
-      position: relative;
-      z-index: 2;
       background: rgba(15,15,26,0.7);
       backdrop-filter: blur(5px);
       margin-top: 60px;
@@ -599,8 +592,7 @@
 
     /* Responsive */
     @media (max-width: 1150px) {
-      .main-hero,
-      .main-hero.active {
+      .main-hero {
         gap: 30px;
       }
       .hero-img,
@@ -609,7 +601,6 @@
         height: 240px;
       }
       .hero-info {
-        min-width: unset;
         padding: 30px 6vw;
       }
       nav {
@@ -617,8 +608,7 @@
       }
     }
     @media (max-width: 900px) {
-      .main-hero,
-      .main-hero.active {
+      .main-hero {
         flex-direction: column;
         gap: 38px;
         padding-top: 42px;
@@ -661,11 +651,9 @@
       }
       .cert-card {
         width: 100%;
-        max-width: 325px;
       }
       .cert-image {
         width: 100%;
-        max-width: 240px;
         height: 160px;
       }
       .hero-info h1 {
@@ -683,26 +671,20 @@
       .skill-icon i {
         font-size: 50px;
       }
-      .project-title {
-        font-size: 1.2em;
-      }
     }
   </style>
 </head>
 <body>
   <!-- Background Video -->
   <video autoplay muted loop id="video-bg">
-    <!-- Replace with your video file -->
     <source src="tech-bg.mp4" type="video/mp4">
-    Your browser does not support HTML5 video.
   </video>
   <div id="video-overlay"></div>
 
-  <!-- Navigation with Logo Image -->
+  <!-- Navigation -->
   <nav>
-    <!-- Replace "logo.png" with your actual logo file -->
-    <img src="logo.png" alt="Bhumarapu Hari Prasad Logo" class="logo-img" aria-label="Brand Logo">
-    <div class="links" role="navigation" aria-label="Primary navigation">
+    <img src="logo.png" alt="Logo" class="logo-img">
+    <div class="links">
       <a href="#home" class="active">Home</a>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
@@ -714,243 +696,143 @@
   </nav>
 
   <!-- Home Section -->
-  <section class="main-hero active" id="home" role="region" aria-label="Home">
+  <section class="main-hero active" id="home">
     <div class="hero-info">
       <h1>Bhumarapu Hari Prasad</h1>
       <p>
-        BTech CSE student & software development enthusiast.<br/>
-        Expert in Python, web tech, and problem-solving.<br/>
+        BTech CSE student & software development enthusiast.<br>
+        Expert in Python, web tech, and problem-solving.<br>
         Crafting impactful digital solutions from Chennai.
       </p>
-      <a href="resume.pdf" download="HariPrasad_Resume.pdf" class="resume-btn" role="button" aria-label="Download Resume">
+      <a href="resume.pdf" download class="resume-btn">
         Download Resume
       </a>
     </div>
     <div class="hero-img">
-      <!-- Replace with your profile image -->
-      <img src="profile.jpg" alt="Portrait of Bhumarapu Hari Prasad" />
+      <img src="profile.jpg" alt="Profile Photo">
     </div>
   </section>
 
   <!-- About Section -->
-  <section class="section" id="about" role="region" aria-label="About Me">
+  <section class="section" id="about">
     <h2>About Me</h2>
-    <hr />
+    <hr>
     <p>
       I am currently a BTech student specializing in Computer Science and Engineering,
-      passionate about software development and building efficient web and data-driven solutions.<br/>
-      I work daily with Python, SQL, HTML, CSS, JavaScript, and enjoy optimizing logic for better results.<br/>
+      passionate about software development and building efficient web and data-driven solutions.<br>
+      I work daily with Python, SQL, HTML, CSS, JavaScript, and enjoy optimizing logic for better results.<br>
       My drive is constant innovation and a desire to make an impact.
     </p>
-    <a href="resume.pdf" download="HariPrasad_Resume.pdf" class="resume-btn" role="button" aria-label="Download Resume">
+    <a href="resume.pdf" download class="resume-btn">
       Download Resume
     </a>
   </section>
 
-  <!-- Technical Skills Section -->
-  <section class="section" id="skills" role="region" aria-label="Technical Skills">
+  <!-- Skills Section -->
+  <section class="section" id="skills">
     <h2>Technical Skills</h2>
-    <hr />
+    <hr>
     
-    <!-- Programming Languages -->
     <div class="skills-subsection">
       <h3><i class="fas fa-code"></i> Programming Languages</h3>
       <div class="skill-icons">
-        <div class="skill-icon" title="Python" aria-label="Python">
-          <i class="fab fa-python" aria-hidden="true"></i>
+        <div class="skill-icon">
+          <i class="fab fa-python"></i>
           <div class="skill-label">Python</div>
         </div>
-        <div class="skill-icon" title="Java" aria-label="Java">
-          <i class="fab fa-java" aria-hidden="true"></i>
+        <div class="skill-icon">
+          <i class="fab fa-java"></i>
           <div class="skill-label">Java</div>
         </div>
-        <div class="skill-icon" title="C" aria-label="C">
-          <i class="fas fa-c" aria-hidden="true"></i>
+        <div class="skill-icon">
+          <i class="fas fa-c"></i>
           <div class="skill-label">C</div>
-        </div>
-        <div class="skill-icon" title="C++" aria-label="C++">
-          <i class="fas fa-c plus" aria-hidden="true"></i>
-          <div class="skill-label">C++</div>
         </div>
       </div>
     </div>
     
-    <!-- Web Development & UI -->
     <div class="skills-subsection">
-      <h3><i class="fas fa-laptop-code"></i> Web Development & UI</h3>
+      <h3><i class="fas fa-laptop-code"></i> Web Development</h3>
       <div class="skill-icons">
-        <div class="skill-icon" title="HTML5" aria-label="HTML5">
-          <i class="fab fa-html5" aria-hidden="true"></i>
+        <div class="skill-icon">
+          <i class="fab fa-html5"></i>
           <div class="skill-label">HTML5</div>
         </div>
-        <div class="skill-icon" title="CSS3" aria-label="CSS3">
-          <i class="fab fa-css3-alt" aria-hidden="true"></i>
+        <div class="skill-icon">
+          <i class="fab fa-css3-alt"></i>
           <div class="skill-label">CSS3</div>
         </div>
-        <div class="skill-icon" title="JavaScript" aria-label="JavaScript">
-          <i class="fab fa-js" aria-hidden="true"></i>
+        <div class="skill-icon">
+          <i class="fab fa-js"></i>
           <div class="skill-label">JavaScript</div>
         </div>
       </div>
     </div>
     
-    <!-- Databases -->
     <div class="skills-subsection">
       <h3><i class="fas fa-database"></i> Databases</h3>
       <div class="skill-icons">
-        <div class="skill-icon" title="SQL" aria-label="SQL">
-          <i class="fas fa-database" aria-hidden="true"></i>
+        <div class="skill-icon">
+          <i class="fas fa-database"></i>
           <div class="skill-label">SQL</div>
         </div>
-        <div class="skill-icon" title="Firebase" aria-label="Firebase">
-          <i class="fas fa-fire" aria-hidden="true"></i>
+        <div class="skill-icon">
+          <i class="fas fa-fire"></i>
           <div class="skill-label">Firebase</div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Development Tools -->
-    <div class="skills-subsection">
-      <h3><i class="fas fa-tools"></i> Development Tools</h3>
-      <div class="skill-icons">
-        <div class="skill-icon" title="Git" aria-label="Git">
-          <i class="fab fa-git-alt" aria-hidden="true"></i>
-          <div class="skill-label">Git</div>
-        </div>
-        <div class="skill-icon" title="GitHub" aria-label="GitHub">
-          <i class="fab fa-github" aria-hidden="true"></i>
-          <div class="skill-label">GitHub</div>
-        </div>
-        <div class="skill-icon" title="VS Code" aria-label="VS Code">
-          <i class="fas fa-code" aria-hidden="true"></i>
-          <div class="skill-label">VS Code</div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Cloud Platform -->
-    <div class="skills-subsection">
-      <h3><i class="fas fa-cloud"></i> Cloud Platform</h3>
-      <div class="skill-icons">
-        <div class="skill-icon" title="AWS" aria-label="AWS">
-          <i class="fab fa-aws" aria-hidden="true"></i>
-          <div class="skill-label">AWS</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section class="section" id="projects" role="region" aria-label="Projects">
+  <section class="section" id="projects">
     <h2>Projects</h2>
-    <hr />
+    <hr>
     <div class="projects-container">
-      <!-- Project 1 -->
       <div class="project-card">
         <div class="project-image">
-          <!-- Replace with your project image -->
-          <img src="project1.jpg" alt="E-commerce Website Screenshot">
+          <img src="project1.jpg" alt="E-commerce Platform">
         </div>
         <div class="project-content">
           <h3 class="project-title">E-commerce Platform</h3>
           <p class="project-description">
-            A full-stack e-commerce website with user authentication, product catalog, shopping cart, and payment integration.
+            Full-stack e-commerce website with user authentication, product catalog, and payment integration.
           </p>
           <div class="project-tech">
             <span class="tech-tag">React</span>
             <span class="tech-tag">Node.js</span>
             <span class="tech-tag">MongoDB</span>
-            <span class="tech-tag">Stripe API</span>
           </div>
           <div class="project-links">
-            <a href="https://example-ecommerce.com" target="_blank" class="project-link demo-link">
+            <a href="#" class="project-link demo-link">
               <i class="fas fa-external-link-alt"></i> Live Demo
             </a>
-            <a href="https://github.com/yourusername/ecommerce-platform" target="_blank" class="project-link code-link">
+            <a href="#" class="project-link code-link">
               <i class="fab fa-github"></i> View Code
             </a>
           </div>
         </div>
       </div>
-
-      <!-- Project 2 -->
+      
       <div class="project-card">
         <div class="project-image">
-          <!-- Replace with your project image -->
-          <img src="project2.jpg" alt="Task Manager App Screenshot">
+          <img src="project2.jpg" alt="Task Manager">
         </div>
         <div class="project-content">
-          <h3 class="project-title">Task Management App</h3>
+          <h3 class="project-title">Task Manager</h3>
           <p class="project-description">
-            A productivity application for task management with drag-and-drop interface, reminders, and team collaboration features.
+            Productivity application with drag-and-drop interface and team collaboration features.
           </p>
           <div class="project-tech">
             <span class="tech-tag">Python</span>
             <span class="tech-tag">Django</span>
             <span class="tech-tag">PostgreSQL</span>
-            <span class="tech-tag">JavaScript</span>
           </div>
           <div class="project-links">
-            <a href="https://example-taskapp.com" target="_blank" class="project-link demo-link">
+            <a href="#" class="project-link demo-link">
               <i class="fas fa-external-link-alt"></i> Live Demo
             </a>
-            <a href="https://github.com/yourusername/task-manager" target="_blank" class="project-link code-link">
-              <i class="fab fa-github"></i> View Code
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 3 -->
-      <div class="project-card">
-        <div class="project-image">
-          <!-- Replace with your project image -->
-          <img src="project3.jpg" alt="Sentiment Analysis Dashboard">
-        </div>
-        <div class="project-content">
-          <h3 class="project-title">Sentiment Analysis Tool</h3>
-          <p class="project-description">
-            NLP application that analyzes customer reviews and social media posts to determine sentiment and key themes.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">NLTK</span>
-            <span class="tech-tag">Flask</span>
-            <span class="tech-tag">D3.js</span>
-          </div>
-          <div class="project-links">
-            <a href="https://example-sentiment.com" target="_blank" class="project-link demo-link">
-              <i class="fas fa-external-link-alt"></i> Live Demo
-            </a>
-            <a href="https://github.com/yourusername/sentiment-analysis" target="_blank" class="project-link code-link">
-              <i class="fab fa-github"></i> View Code
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 4 -->
-      <div class="project-card">
-        <div class="project-image">
-          <!-- Replace with your project image -->
-          <img src="project4.jpg" alt="Weather App Interface">
-        </div>
-        <div class="project-content">
-          <h3 class="project-title">Weather Forecast App</h3>
-          <p class="project-description">
-            Real-time weather application with 5-day forecasts, location detection, and severe weather alerts.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">JavaScript</span>
-            <span class="tech-tag">React</span>
-            <span class="tech-tag">OpenWeather API</span>
-            <span class="tech-tag">Geolocation API</span>
-          </div>
-          <div class="project-links">
-            <a href="https://example-weather.com" target="_blank" class="project-link demo-link">
-              <i class="fas fa-external-link-alt"></i> Live Demo
-            </a>
-            <a href="https://github.com/yourusername/weather-app" target="_blank" class="project-link code-link">
+            <a href="#" class="project-link code-link">
               <i class="fab fa-github"></i> View Code
             </a>
           </div>
@@ -960,92 +842,52 @@
   </section>
 
   <!-- Achievements Section -->
-  <section class="section" id="achievements" role="region" aria-label="Achievements">
+  <section class="section" id="achievements">
     <h2>Achievements</h2>
-    <hr />
+    <hr>
     <div class="cert-gallery">
       <div class="cert-card">
         <div class="cert-image">
-          <!-- Replace with your academic excellence image -->
-          <img src="achievement1.jpg" alt="Academic Excellence Award" />
+          <img src="achievement1.jpg" alt="Academic Excellence">
         </div>
         <div class="cert-title">Academic Excellence</div>
-        <p>Student Iconic Award for top performance in academics.</p>
+        <p>Student Iconic Award for top performance</p>
       </div>
       
       <div class="cert-card">
         <div class="cert-image">
-          <!-- Replace with your hackathon image -->
-          <img src="achievement2.jpg" alt="Hackathon Winner" />
+          <img src="achievement2.jpg" alt="Hackathon Winner">
         </div>
         <div class="cert-title">Hackathon Winner</div>
-        <p>First prize at the 2024 National Coding Challenge.</p>
-      </div>
-      
-      <div class="cert-card">
-        <div class="cert-image">
-          <!-- Replace with your certifications image -->
-          <img src="achievement3.jpg" alt="Professional Certifications" />
-        </div>
-        <div class="cert-title">Professional Certifications</div>
-        <p>Completed multiple certifications in development technologies.</p>
-      </div>
-      
-      <div class="cert-card">
-        <div class="cert-image">
-          <!-- Replace with your research publication image -->
-          <img src="achievement4.jpg" alt="Research Publication" />
-        </div>
-        <div class="cert-title">Research Publication</div>
-        <p>Published paper on ML applications in web development.</p>
+        <p>First prize at National Coding Challenge</p>
       </div>
     </div>
   </section>
 
   <!-- Certificates Section -->
-  <section class="section" id="certifications" role="region" aria-label="Certificates">
+  <section class="section" id="certifications">
     <h2>Certificates</h2>
-    <hr />
+    <hr>
     <div class="cert-gallery">
       <div class="cert-card">
         <div class="cert-image">
-          <!-- Replace with your Data Structures certificate image -->
-          <img src="certificate1.jpg" alt="Data Structures in C Certificate" />
-        </div>
-        <div class="cert-title">Data Structures in C</div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-image">
-          <!-- Replace with your Python certificate image -->
-          <img src="certificate2.jpg" alt="Python for Beginners Certificate" />
+          <img src="certificate1.jpg" alt="Python Certificate">
         </div>
         <div class="cert-title">
           Python for Beginners
-          <a href="https://www.udemy.com/certificate/UC-7d04013a-304f-488f-b788-967a7c3b6c76/" target="_blank" rel="noopener noreferrer" aria-label="Udemy Certificate for Python for Beginners">
+          <a href="#" target="_blank">
             <i class="fas fa-external-link-alt"></i>
           </a>
         </div>
       </div>
+      
       <div class="cert-card">
         <div class="cert-image">
-          <!-- Replace with your AI Studio certificate image -->
-          <img src="certificate3.jpg" alt="Introduction to Generative AI Studio" />
+          <img src="certificate2.jpg" alt="AI Certificate">
         </div>
         <div class="cert-title">
-          Introduction to Generative AI Studio
-          <a href="https://simpli.app.link/y1jCfr4TKMb" target="_blank" rel="noopener noreferrer" aria-label="Simplilearn Certificate">
-            <i class="fas fa-external-link-alt"></i>
-          </a>
-        </div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-image">
-          <!-- Replace with your Java/C++/PHP certificate image -->
-          <img src="certificate4.jpg" alt="Java, C++ & PHP Crash Course" />
-        </div>
-        <div class="cert-title">
-          Java, C++ & PHP Crash Course
-          <a href="https://www.udemy.com/certificate/UC-0ac74c56-5a35-4df5-b205-613e0ad6db14/" target="_blank" rel="noopener noreferrer" aria-label="Udemy Certificate for Java, C++ & PHP">
+          Introduction to AI
+          <a href="#" target="_blank">
             <i class="fas fa-external-link-alt"></i>
           </a>
         </div>
@@ -1054,65 +896,116 @@
   </section>
 
   <!-- Contact Section -->
-  <section class="section contact-section" id="contact" role="region" aria-label="Contact">
+  <section class="section contact-section" id="contact">
     <h2>Contact</h2>
-    <hr />
+    <hr>
     <p><i class="fas fa-map-marker-alt"></i> Chennai, Tamil Nadu</p>
     <p><i class="fas fa-phone"></i> <a href="tel:+918179646274">+91 81796 46274</a></p>
     <p><i class="fas fa-envelope"></i> <a href="mailto:bhumarapuhariprasad0577.sse@saveetha.com">bhumarapuhariprasad0577.sse@saveetha.com</a></p>
-    <form class="contact-form" aria-label="Contact Form">
-      <input type="text" placeholder="Name" required aria-required="true" />
-      <input type="email" placeholder="Email" required aria-required="true" />
-      <input type="text" placeholder="Subject" required aria-required="true" />
-      <textarea rows="4" placeholder="Message" required aria-required="true"></textarea>
-      <button type="submit" aria-label="Send Message"><i class="fas fa-paper-plane"></i> SEND</button>
+    
+    <form id="portfolioContactForm" class="contact-form">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <input type="text" id="subject" placeholder="Subject" required>
+      <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+      
+      <div class="privacy-check">
+        <input type="checkbox" id="privacy" required>
+        <label for="privacy">I consent to data collection</label>
+      </div>
+      
+      <button type="submit" id="submitBtn">
+        <i class="fas fa-paper-plane"></i> SEND MESSAGE
+      </button>
+      
+      <div id="formStatus" class="form-message"></div>
     </form>
   </section>
 
   <!-- Footer -->
   <footer>
-    &copy; 2025 Bhumarapu Hari Prasad. Designed with ambition and color.
+    &copy; 2025 Bhumarapu Hari Prasad. All rights reserved.
   </footer>
 
   <script>
+    // Navigation handling
     document.addEventListener('DOMContentLoaded', () => {
-      // Show home on page load
+      // Show home section by default
       showSection('home');
       
-      // Navigation handling
+      // Handle navigation clicks
       document.querySelectorAll('nav .links a').forEach(link => {
         link.addEventListener('click', function(e) {
           e.preventDefault();
           const targetId = this.getAttribute('href').substring(1);
           showSection(targetId);
-          
-          // Scroll to the section smoothly
-          const targetSection = document.getElementById(targetId);
-          if (targetSection) {
-            targetSection.scrollIntoView({ behavior: 'smooth' });
-          }
+          document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
         });
+      });
+
+      // Contact form submission
+      const form = document.getElementById('portfolioContactForm');
+      const submitBtn = document.getElementById('submitBtn');
+      const statusMsg = document.getElementById('formStatus');
+      
+      // REPLACE THIS WITH YOUR GOOGLE APPS SCRIPT URL
+      const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw2yjAA8-z4oFjhivCcGSMrN2yMQdICx14JCJlkKuD8kwZ5zDYEKMuglLxqLMJDhgca/exec';
+      
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        // Disable button and show loading
+        submitBtn.disabled = true;
+        statusMsg.className = 'form-message loading';
+        statusMsg.textContent = 'Sending your message...';
+        statusMsg.style.display = 'block';
+        
+        try {
+          const response = await fetch(SCRIPT_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              name: document.getElementById('name').value,
+              email: document.getElementById('email').value,
+              subject: document.getElementById('subject').value,
+              message: document.getElementById('message').value,
+              timestamp: new Date().toISOString(),
+              pageUrl: window.location.href
+            })
+          });
+          
+          if (response.ok) {
+            statusMsg.className = 'form-message success';
+            statusMsg.innerHTML = '<i class="fas fa-check-circle"></i> Message sent successfully!';
+            form.reset();
+          } else {
+            throw new Error('Submission failed');
+          }
+        } catch (error) {
+          statusMsg.className = 'form-message error';
+          statusMsg.innerHTML = '<i class="fas fa-exclamation-circle"></i> Error sending message. Please try again.';
+          console.error('Error:', error);
+        } finally {
+          submitBtn.disabled = false;
+          setTimeout(() => statusMsg.style.display = 'none', 5000);
+        }
       });
     });
 
     function showSection(id) {
+      // Hide all sections
       document.querySelectorAll('.main-hero, .section').forEach(section => {
         section.classList.remove('active');
       });
       
-      const target = document.getElementById(id);
-      if (target) {
-        target.classList.add('active');
-      }
+      // Show selected section
+      document.getElementById(id).classList.add('active');
       
+      // Update active nav link
       document.querySelectorAll('nav .links a').forEach(link => {
         link.classList.remove('active');
       });
-      
-      const activeLink = document.querySelector(`nav .links a[href="#${id}"]`);
-      if (activeLink) {
-        activeLink.classList.add('active');
-      }
+      document.querySelector(`nav .links a[href="#${id}"]`).classList.add('active');
     }
   </script>
 </body>
