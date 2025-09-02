@@ -40,8 +40,6 @@ portfolio/
 ├── achievement2.jpg # Hackathon win image
 └── certificate[1-10].png # Various certification badges
 
-text
-
 ## 🎨 Color Palette
 
 | Color | Hex | Usage |
