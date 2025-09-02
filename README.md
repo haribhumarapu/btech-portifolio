@@ -69,48 +69,44 @@ The website includes the following sections:
 
 To run this project locally:
 
-1. **Clone the repository**
-   ```bash
-   git clone (https://github.com/haribhumarapu/btech-portifolio)
-Navigate to the project directory
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/haribhumarapu/btech-portifolio.git
+    ```
 
-bash
-cd (https://github.com/haribhumarapu/btech-portifolio)
-Open index.html in your browser
+2.  **Navigate to the project directory**
+    ```bash
+    cd btech-portifolio
+    ```
 
-Simply double-click the file, or
+3.  **Open `index.html` in your browser**
+    - Simply double-click the file, or
+    - Use a local server (e.g., with Live Server in VSCode for live reload)
 
-Use a local server (e.g., with Live Server in VSCode)
+## 📜 Usage
 
-📜 Usage
-Click on navigation items to smoothly scroll to different sections.
+- Click on navigation items to smoothly scroll to different sections.
+- Download the resume using the **"Download Resume"** button.
+- View project details and interact with live demo/code links.
+- Hover over skill icons to see animations.
+- Use the contact form to send a message (currently simulates submission).
 
-Download the resume using the "Download Resume" button.
+## 🌐 Browser Support
 
-View project details and interact with live demo/code links.
-
-Hover over skill icons to see animations.
-
-Use the contact form to send a message (currently simulates submission).
-
-🌐 Browser Support
 Compatible with all modern browsers including:
-
-Chrome (recommended)
-
-Firefox
-
-Safari
-
-Edge
+- Chrome (recommended)
+- Firefox
+- Safari
+- Edge
 
 📝 License
 This project is open source and available under the MIT License.
 
-📞 Contact
-Bhumarapu Hari Prasad - bhumarapuhariprasad0577.sse@saveetha.com
+## 📞 Contact
 
-Project Link: https://github.com/haribhumarapu/btech-portifolio
+Bhumarapu Hari Prasad - [bhumarapuhariprasad0577.sse@saveetha.com](mailto:bhumarapuhariprasad0577.sse@saveetha.com)
 
-LinkedIn: [www.linkedin.com/in/](https://www.linkedin.com/in/haribhuamarapu?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
+Project Link: [https://github.com/haribhumarapu/btech-portifolio](https://github.com/haribhumarapu/btech-portifolio)
+
+LinkedIn: (https://www.linkedin.com/in/haribhuamarapu?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
 
