@@ -28,28 +28,31 @@ A modern, responsive, and single-page portfolio website designed to showcase my 
 - **Deployment:** GitHub Pages
 
 ## 📁 Project Structure
+
+```
 portfolio/
-├── index.html # Main website file
-├── README.md # Project documentation (this file)
-├── logo.png # Navigation logo
-├── profile.jpg # Professional headshot
-├── resume.pdf # Downloadable CV/Resume
-├── project1.jpg # E-commerce project screenshot
-├── project2.jpg # Task manager project screenshot
-├── achievement1.jpg # Academic award image
-├── achievement2.jpg # Hackathon win image
+├── index.html          # Main website file
+├── README.md           # Project documentation (this file)
+├── logo.png            # Navigation logo
+├── profile.jpg         # Professional headshot
+├── resume.pdf          # Downloadable CV/Resume
+├── project1.jpg        # E-commerce project screenshot
+├── project2.jpg        # Task manager project screenshot
+├── achievement1.jpg    # Academic award image
+├── achievement2.jpg    # Hackathon win image
 └── certificate[1-10].png # Various certification badges
+```
 
 ## 🎨 Color Palette
 
-| Color | Hex | Usage |
-| :--- | :--- | :--- |
-| Dark Background | `#0f0f1a` | Main background |
-| Card Background | `#1a1b2e` | Section cards |
-| Primary Teal | `#00e6d8` | Headings, accents |
-| Secondary Magenta | `#fa2ffe` | Gradient accents |
-| Accent Green | `#50fa7b` | Buttons, success states |
-| Error Red | `#ff4757` | Error messages |
+| Color               | Hex       | Usage                                  |
+| :------------------ | :-------- | :------------------------------------- |
+| Dark Background     | `#0f0f1a` | Main background color                  |
+| Card Background     | `#1a1b2e` | Section cards and containers           |
+| Primary Teal        | `#00e6d8` | Headings, links, main accents          |
+| Secondary Magenta   | `#fa2ffe` | Gradient accents, hover effects        |
+| Accent Green        | `#50fa7b` | Buttons, success states, CTAs          |
+| Error Red           | `#ff4757` | Error messages and warnings            |
 
 ## 📄 Sections
 
