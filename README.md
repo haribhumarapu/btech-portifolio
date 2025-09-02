@@ -112,6 +112,5 @@ Bhumarapu Hari Prasad - bhumarapuhariprasad0577.sse@saveetha.com
 
 Project Link: https://github.com/haribhumarapu/btech-portifolio
 
-LinkedIn: www.linkedin.com/in/
-haribhuamarapu
+LinkedIn: [www.linkedin.com/in/](https://www.linkedin.com/in/haribhuamarapu?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
 
