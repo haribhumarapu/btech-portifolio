@@ -9,8 +9,7 @@ A modern, responsive, and single-page portfolio website designed to showcase my 
 
 ## 🚀 Live Demo
 
-> **[Visit My Live Portfolio](https://your-github-username.github.io)** *(Replace with your actual GitHub Pages URL)*
-
+> **[Visit My Live Portfolio][(https://your-github-username.github.io](https://haribhumarapu.github.io/btech-portifolio/))
 ## ✨ Features
 
 - **🎯 Modern UI/UX:** Clean, dark-themed interface with vibrant gradient accents (#00e6d8, #fa2ffe).
